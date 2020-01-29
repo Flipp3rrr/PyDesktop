@@ -23,7 +23,7 @@ while True:
     cmd = input("BasicSHELL> ")
     
     if cmd == "help":
-        print("Basic commands:\n  help: display help text\n  exit: stop PythonOS\n  fileXPLR: File explorer")
+        print("Basic commands:\n  help: display help text\n  exit: stop PythonOS\n  ls: Show directory contents\n  cd: Go to direcotry")
 
     if cmd == "shutdown":
         print("Shutting down...")
@@ -31,6 +31,7 @@ while True:
 
     if cmd == "ls":
         print("The current directory contains the following:\nEMPTY")
-
-    else:
-        print("ERR_1:", cmd, "is not a valid command!")
+    
+    if cmd == "cd":
+        # TO DO!!!
+        print("...")
