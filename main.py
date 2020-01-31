@@ -30,6 +30,7 @@ while True:
         sys.exit()
 
     if cmd == "ls":
+        # TO DO!!!
         print("The current directory contains the following:\nEMPTY")
     
     if cmd == "cd":
