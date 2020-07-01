@@ -19,12 +19,10 @@ The free and open-source cross-platform desktop environment written in Python.
 """)
 
 # import modules which are needed later
-# - tkinter
 # - sys
 # - time
 print("Importing modules...")
 try:
-    import tkinter as tk
     import sys
     import time
     print("Imported modules succesfully!")
@@ -42,6 +40,9 @@ print()
 print("WARN$ Files are not encrypted!")
 print()
 print("Welcome to PythonOS!")
+
+# login screen, asks for user and password
+
 
 # basic shell, maybe this shouldn't be here but it is for now
 while True:
