@@ -19,12 +19,14 @@ The free and open-source cross-platform desktop environment written in Python.
 """)
 
 # import modules which are needed later
-# - sys
 # - time
+# - sys
+# - os
 print("Importing modules...")
 try:
-    import sys
     import time
+    import sys
+    import os
     print("Modules imported succesfully!")
 
 except Exception as error: 
