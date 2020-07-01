@@ -1,11 +1,16 @@
 print("BOOT> boot(PythonOS)")
 print()
 print("Booting PythonOS...")
-print("Starting modules...")
-import tkinter as tk
-import sys
-import time
-print("Modules started!")
+
+print("Importing modules...")
+try:
+    import tkinter as tk
+    import sys
+    import time
+print("Imported modules succesfully!")
+except Exception as error: 
+    print('ERR$', error) 
+
 print("PythonOS booted succesfully!")
 print("Looking for desktop environment...")
 print("No desktop environment found!")
@@ -13,9 +18,6 @@ print("Booting to shell...")
 print("Shell ready!")
 print()
 print("WARN$ Files are not encrypted!")
-print("WARN$ No users detected!")
-print("ERR $ No default user!")
-print("WARN$ Logging in fallback_usr...")
 print()
 print("Welcome to PythonOS!")
 
