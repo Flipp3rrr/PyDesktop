@@ -7,7 +7,7 @@ try:
     import tkinter as tk
     import sys
     import time
-print("Imported modules succesfully!")
+    print("Imported modules succesfully!")
 except Exception as error: 
     print('ERR$', error) 
 
