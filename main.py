@@ -25,10 +25,12 @@ print("Importing modules...")
 try:
     import sys
     import time
-    print("Imported modules succesfully!")
+    print("Modules imported succesfully!")
 
 except Exception as error: 
-    print('ERR$', error) 
+    print("""
+ERR$ Failed to import modules, more information:
+    """, error, "\n") 
 
 # random gibberish that looks cool
 print("PythonOS booted succesfully!")
@@ -56,6 +58,8 @@ while True:
             ls: Show directory contents
             cd: Go to direcotry
         """)
+    if cmd == "exit":
+        sys.exit()
 
     if cmd == "shutdown":
         # TO DO!!
