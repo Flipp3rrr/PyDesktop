@@ -1,6 +1,22 @@
-print("BOOT> boot(PythonOS)")
-print()
-print("Booting PythonOS...")
+print("""
+Welcome to
+
+  _____            _____                         _       _
+ / ___ \          |  __ \                       | |   __| |__
+| |   | |         | |  \ \                      | |  |__   __|
+| |   | |         | |   \ \    ______   _______ | |  __ | |       ______     _____
+| |___| | _    _  | |    | |  /  ___/  /  ____/ | | / / | |      /  __  \   / ___ \ 
+|  ____/ | |  | | | |    | | | |_____  \____ \  | |/ /  | |     |  /  \  | | |   | |
+| |      | |  | | | |   / /  |  ____/       \ \ |   <   | |     | |    | | | |   | |
+| |      | |__| | | |__/ /   | |_____  _____/ / | |\ \  | |____ |  \__/  | | |___| |
+|_|       \___  | |_____/     \_____/  \_____/  |_| \_\ \_____/  \______/  |  ____/
+         _____| |                                                          | |
+         \______/                                                          |_|
+
+The free and open-source cross-platform desktop environment written in Python.
+
+===
+""")
 
 print("Importing modules...")
 try:
@@ -8,6 +24,7 @@ try:
     import sys
     import time
     print("Imported modules succesfully!")
+
 except Exception as error: 
     print('ERR$', error) 
 
