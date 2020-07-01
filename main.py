@@ -18,6 +18,10 @@ The free and open-source cross-platform desktop environment written in Python.
 ===
 """)
 
+# import modules which are needed later
+# - tkinter
+# - sys
+# - time
 print("Importing modules...")
 try:
     import tkinter as tk
@@ -28,6 +32,7 @@ try:
 except Exception as error: 
     print('ERR$', error) 
 
+# random gibberish that looks cool
 print("PythonOS booted succesfully!")
 print("Looking for desktop environment...")
 print("No desktop environment found!")
@@ -38,8 +43,9 @@ print("WARN$ Files are not encrypted!")
 print()
 print("Welcome to PythonOS!")
 
+# basic shell, maybe this shouldn't be here but it is for now
 while True:
-    cmd = input("BasicSHELL> ")
+    cmd = input("SHELL> ")
     
     if cmd == "help":
         print("""
