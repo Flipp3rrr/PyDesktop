@@ -42,16 +42,23 @@ while True:
     cmd = input("BasicSHELL> ")
     
     if cmd == "help":
-        print("Basic commands:\n  help: display help text\n  exit: stop PythonOS\n  ls: Show directory contents\n  cd: Go to direcotry")
+        print("""
+        Basic commands:
+            help: display help text
+            exit: stop PythonOS
+            ls: Show directory contents
+            cd: Go to direcotry
+        """)
 
     if cmd == "shutdown":
-        print("Shutting down...")
+        # TO DO!!
+        print("FEATURE IS //TBD//")
         sys.exit()
 
     if cmd == "ls":
-        # TO DO!!!
-        print("The current directory contains the following:\nEMPTY")
+        # TO DO!!
+        print("FEATURE IS //TBD//")
     
     if cmd == "cd":
-        # TO DO!!!
-        print("...")
+        # TO DO!!
+        print("FEATURE IS //TBD//")
