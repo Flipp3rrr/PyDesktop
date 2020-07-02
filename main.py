@@ -32,12 +32,10 @@ try:
     print("Modules imported succesfully!")
 
 except Exception as error: 
-    print("""
-ERR$ Failed to import modules, more information:
-    """, error, "\n") 
+    print("ERR$ Failed to import modules, more information:\n", error, "\n")
+    quit()
 
-# system information, used for:
-# - file reading
+# system information
 print()
 print("Checking system information...")
 plfOS = platform.system()
@@ -47,30 +45,36 @@ plfProcessor = platform.processor()
 print("""
 System   : %s
 CPU arch.: %s
-Processor: %s
-""" % (plfOS, plfCPUarchitecture, plfProcessor))
+Processor: %s""" % (plfOS, plfCPUarchitecture, plfProcessor))
 print()
 
+# save current running directory path to var
+programPath = os.path.dirname(os.path.realpath(__file__))
+
 # random gibberish that looks cool
-print("PythonOS booted succesfully!")
-print("Looking for desktop environment...")
-print("No desktop environment found!")
-print("Booting to shell...")
-print("Shell ready!")
-print()
-print("WARN$ Files are not encrypted!")
-print()
-print("Welcome to PythonOS!")
+print("""PyDesktop started succesfully!
+Starting shell...
+Shell ready!
+
+Setting up system defs...
+""")
 
 # file reading
 def fileReader(fileAct, filePath):
     if plfOS == "Darwin":
         if fileAct == "read":
-            filePath1 = "open('", filePath, "')"
+            filePath1 = open(filePath)
             print(filePath)
 
-fileReader(read, '/Users/')
+try:
+    userName = fileReader("read", '/Users/gebruiker/Documents/GitHub/PyDesktop/system/user.usr')
+    print(userName)
+except Exception as error: 
+    sys.exit("ERR$ Fatal error while reading files:\n     %s" % (error)) 
 
+print("Finished setting up defs!")
+print("Welcome to PyDesktop")
+print()
 
 # login screen, asks for user and password
 
