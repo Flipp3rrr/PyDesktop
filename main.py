@@ -52,7 +52,7 @@ print()
 programPath = os.path.dirname(os.path.realpath(__file__))
 print("Current dir.: ", programPath)
 
-print("Setting up system defs...)
+print("Setting up system defs...")
 
 # file reading
 def fileReader(fileAct, filePath):
@@ -90,7 +90,7 @@ while True:
             cd: Go to direcotry
         """)
     if cmd == "exit":
-        sys.exit()
+        sys.exit("Goodbye!")
 
     if cmd == "shutdown":
         # TO DO!!
