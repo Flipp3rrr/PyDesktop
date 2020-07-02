@@ -56,9 +56,7 @@ print("Current dir.: ", programPath)
 print("""PyDesktop started succesfully!
 Starting shell...
 Shell ready!
-
-Setting up system defs...
-""")
+Setting up system defs...""")
 
 # file reading
 def fileReader(fileAct, filePath):
