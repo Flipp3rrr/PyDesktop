@@ -52,11 +52,7 @@ print()
 programPath = os.path.dirname(os.path.realpath(__file__))
 print("Current dir.: ", programPath)
 
-# random gibberish that looks cool
-print("""PyDesktop started succesfully!
-Starting shell...
-Shell ready!
-Setting up system defs...""")
+print("Setting up system defs...)
 
 # file reading
 def fileReader(fileAct, filePath):
