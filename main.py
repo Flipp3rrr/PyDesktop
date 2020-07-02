@@ -50,6 +50,7 @@ print()
 
 # save current running directory path to var
 programPath = os.path.dirname(os.path.realpath(__file__))
+print("Current dir.: ", programPath)
 
 # random gibberish that looks cool
 print("""PyDesktop started succesfully!
@@ -61,16 +62,19 @@ Setting up system defs...
 
 # file reading
 def fileReader(fileAct, filePath):
-    if plfOS == "Darwin":
-        if fileAct == "read":
-            filePath1 = open(filePath)
-            print(filePath)
-
-try:
-    userName = fileReader("read", '/Users/gebruiker/Documents/GitHub/PyDesktop/system/user.usr')
-    print(userName)
-except Exception as error: 
-    sys.exit("ERR$ Fatal error while reading files:\n     %s" % (error)) 
+    try:
+        # check os
+        if plfOS == "Darwin":
+            # check action
+            if fileAct == "read":
+                # read file
+                filePath1 = programPath + filePath
+                fileC = open(filePath1)
+                fileC1 = fileC.read()
+                # return file contents
+                return fileC1
+    except Exception as error:
+        sys.exit("ERR$ Fatal error while reading files:\n     %s" % (error)) 
 
 print("Finished setting up defs!")
 print("Welcome to PyDesktop")
