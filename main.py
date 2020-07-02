@@ -14,8 +14,6 @@ Welcome to
          \______/                                                          |_|
 
 The free and open-source cross-platform desktop environment written in Python.
-
-===
 """)
 
 # import modules which are needed later
@@ -23,21 +21,18 @@ The free and open-source cross-platform desktop environment written in Python.
 # - sys
 # - os
 # - platform
-print("Importing modules...")
 try:
     import time
     import sys
     import os
     import platform
-    print("Modules imported succesfully!")
 
 except Exception as error: 
-    print("ERR$ Failed to import modules, more information:\n", error, "\n")
+    print("ERR$ Fatal error while importing modules:\n     %s" % (error)
     quit()
 
 # system information
-print()
-print("Checking system information...")
+print("--- System information ---")
 plfOS = platform.system()
 plfCPUarchitecture = platform.machine()
 plfProcessor = platform.processor()
@@ -48,11 +43,14 @@ CPU arch.: %s
 Processor: %s""" % (plfOS, plfCPUarchitecture, plfProcessor))
 print()
 
+# check compatibility
+if plfOS != "Darwin":
+    print("""
+    WARNING! YOUR CURRENT OPERATING SYSTEM IS NOT SUPPORTED, PLEASE PROCEED WITH CAUTION!
+    """)
+
 # save current running directory path to var
 programPath = os.path.dirname(os.path.realpath(__file__))
-print("Current dir.: ", programPath)
-
-print("Setting up system defs...")
 
 # file reading
 def fileReader(fileAct, filePath):
@@ -68,14 +66,11 @@ def fileReader(fileAct, filePath):
                 # return file contents
                 return fileC1
     except Exception as error:
-        sys.exit("ERR$ Fatal error while reading files:\n     %s" % (error)) 
-
-print("Finished setting up defs!")
-print("Welcome to PyDesktop")
-print()
+        sys.exit("ERR$ Fatal error while reading files:\n     %s" % (error))
 
 # login screen, asks for user and password
-
+deviceUsers = fileReader("read", "/system/user.usr")
+print("Choose a user:\n%s" % (deviceUsers))
 
 # basic shell, maybe this shouldn't be here but it is for now
 while True:
