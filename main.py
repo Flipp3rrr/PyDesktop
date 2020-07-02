@@ -28,8 +28,8 @@ try:
     import platform
 
 except Exception as error: 
-    print("ERR$ Fatal error while importing modules:\n     %s" % (error)
-    quit()
+    print("ERR$ Fatal error while importing modules:\n     %s" % (error))
+    exit()
 
 # system information
 print("--- System information ---")
