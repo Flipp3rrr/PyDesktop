@@ -99,3 +99,6 @@ while True:
     if cmd == "cd":
         # TO DO!!
         print("FEATURE IS //TBD//")
+    
+    else:
+        print("FUCK YOU THAT'S AN INVALID COMMAND FUCK OFF WITH YOUR", cmd, "HAHA FUCK YOU")
